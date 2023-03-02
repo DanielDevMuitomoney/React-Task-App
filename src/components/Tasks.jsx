@@ -1,13 +1,13 @@
 import react from 'react'
+import TaskUnique from './TaskUnique'
 
-const Tasks= ({taskObject}) => {
-    return (
-      <div>
-        {taskObject.map((value, index, array) => (
-          <p>{value.id}</p>
-        ))}
-      </div>
-    )
+const Tasks = ({ taskObject }) => {
+  return (<>
+
+  {taskObject.map((task) => (
+    <TaskUnique taskInfo={task} />
+  ))}
+  </>)
 }
 
-export default Tasks;
+export default Tasks
