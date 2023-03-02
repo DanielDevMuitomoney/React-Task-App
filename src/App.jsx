@@ -1,6 +1,10 @@
 import react, { useState } from 'react'
 
+// css
 import './App.css'
+
+//components
+import Tasks from './components/Tasks'
 
 const App = () => {
   // Comportará as tarefas adicionadas pelo user
@@ -22,7 +26,7 @@ const App = () => {
 
     <div className='container'>
 
-      <h1>{`message value -> ${message} `}</h1>
+<Tasks taskObject = {tasksObject} />
 
     </div>
   )
