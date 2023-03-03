@@ -2,6 +2,7 @@ import react, { useState } from 'react'
 
 // css
 import './App.css'
+import AddTask from './components/addTask'
 
 //components
 import Tasks from './components/Tasks'
@@ -25,7 +26,7 @@ const App = () => {
   return(
 
     <div className='container'>
-
+<AddTask />
 <Tasks taskObject = {tasksObject} />
 
     </div>
