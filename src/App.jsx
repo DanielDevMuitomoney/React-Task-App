@@ -23,12 +23,20 @@ const App = () => {
 
 
 ])
-  return(
 
-    <div className='container'>
-<AddTask />
-<Tasks taskObject = {tasksObject} />
 
+const handleTaskAddition = (taskTitle) => {
+  const task = [...tasksObject,{
+    title: taskTitle,
+    id:3,
+    completed: false
+  }]
+  setTaskObject(task)
+}
+  return (
+    <div className="container">
+      <AddTask onClick={handleTaskAddition} />
+      <Tasks taskObject={tasksObject} />
     </div>
   )
 }
