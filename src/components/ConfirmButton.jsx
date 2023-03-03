@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ConfirmButton = () => {
+const ConfirmButton = ({children}) => {
   return (
-    <button>ConfirmButton</button>
+    <button className='button-confirm'>{children}</button>
   )
 }
 
