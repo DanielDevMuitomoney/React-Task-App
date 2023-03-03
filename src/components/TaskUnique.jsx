@@ -1,8 +1,10 @@
 import React from 'react'
 
+import '../styles/stylesComponents/TaskUnique.css'
+
 const TaskUnique = ({taskInfo}) => {
   return (
-    <div>{taskInfo.title}</div>
+    <div className='task-container'>{taskInfo.title}</div>
   )
 }
 
