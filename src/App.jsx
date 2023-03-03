@@ -2,7 +2,7 @@ import react, { useState } from 'react'
 
 // css
 import './App.css'
-import AddTask from './components/addTask'
+import AddTask from './components/AddTask'
 
 //components
 import Tasks from './components/Tasks'

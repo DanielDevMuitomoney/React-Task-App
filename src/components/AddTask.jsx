@@ -7,7 +7,13 @@ const AddTask = () => {
   return (
     <div className="add-task-container">
       <input className="add-task-input" type="text" />
-      <ConfirmButton >abcdefg</ConfirmButton>
+
+      <div className="add-task-button-container">
+
+      <ConfirmButton>Adicionar</ConfirmButton>
+
+      </div>
+
     </div>
   )
 }

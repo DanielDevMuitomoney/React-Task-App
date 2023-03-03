@@ -1,8 +1,11 @@
 import React from 'react'
 
-const ConfirmButton = ({children}) => {
+
+import '../styles/stylesComponents/ConfirmButton.css'
+
+const ConfirmButton = ({children,onClick}) => {
   return (
-    <button className='button-confirm'>{children}</button>
+    <button onClick={onClick} className='button-confirm'>{children}</button>
   )
 }
 
