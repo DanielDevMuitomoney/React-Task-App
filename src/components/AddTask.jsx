@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 import '../styles/stylesComponents/AddTask.css'
 import ConfirmButton from './confirmButton'
 
-const AddTask = ({onClick}) => {
+const AddTask = ({handleOnClick}) => {
   const [inputData, setInputData]  = useState(null)
   
     const handleAddTaskClick = () => {
-      onClick(inputData)
+      handleOnClick(inputData)
     }
 
 

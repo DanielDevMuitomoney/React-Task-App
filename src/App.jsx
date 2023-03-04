@@ -35,7 +35,7 @@ const handleTaskAddition = (taskTitle) => {
 }
   return (
     <div className="container">
-      <AddTask onClick={handleTaskAddition} />
+      <AddTask handleOnClick={handleTaskAddition} />
       <Tasks taskObject={tasksObject} />
     </div>
   )
