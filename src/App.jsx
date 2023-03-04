@@ -10,6 +10,7 @@ import Tasks from './components/Tasks'
 
 //lib
 import {v4 as uuidv4} from 'uuid'
+import Header from './components/Header'
 
 const App = () => {
   // Comportará as tarefas adicionadas pelo user
@@ -61,6 +62,7 @@ const  handleDeleteTaskClick = (taskId) => {
 
   return (
     <div className="container">
+      <Header />
       <AddTask handleOnClick={handleTaskAddition} />
       <Tasks
         handleDeleteTaskClick={handleDeleteTaskClick}
