@@ -7,6 +7,10 @@ import AddTask from './components/AddTask'
 //components
 import Tasks from './components/Tasks'
 
+
+//lib
+import {v4 as uuidv4} from 'uuid'
+
 const App = () => {
   // Comportará as tarefas adicionadas pelo user
   const [tasksObject , setTaskObject] = useState([{
@@ -28,10 +32,11 @@ const App = () => {
 const handleTaskAddition = (taskTitle) => {
   const task = [...tasksObject,{
     title: taskTitle,
-    id:3,
+    id:uuidv4(),
     completed: false
   }]
   setTaskObject(task)
+  
 }
   return (
     <div className="container">

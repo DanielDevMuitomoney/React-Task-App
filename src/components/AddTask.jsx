@@ -8,6 +8,7 @@ const AddTask = ({handleOnClick}) => {
   
     const handleAddTaskClick = () => {
       handleOnClick(inputData)
+      setInputData('')
     }
 
 
@@ -20,7 +21,10 @@ const AddTask = ({handleOnClick}) => {
   (null)
   return (
     <div className="add-task-container">
-      <input onChange={handleInputChange} className="add-task-input" type="text" />
+      <input onChange={handleInputChange} className="add-task-input" type="text"
+      
+      value={inputData}
+      />
 
       <div className="add-task-button-container">
 
