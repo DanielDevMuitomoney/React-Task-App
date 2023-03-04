@@ -2,11 +2,11 @@ import React from 'react'
 
 import '../styles/stylesComponents/TaskUnique.css'
 
-const TaskUnique = ({taskInfo,handleTaskClick}) => {
+const TaskUnique = ({ taskInfo, handleTaskClick, handleDeleteTaskClick }) => {
   return (
-    // <div className='task-container'>{taskInfo.title}</div>
+
     <div
-      className="task-container" 
+      className="task-container"
       style={
         taskInfo.completed
           ? {
@@ -15,10 +15,23 @@ const TaskUnique = ({taskInfo,handleTaskClick}) => {
           : {}
       }
     >
-      <div  className="task-title" onClick={() => {
-        handleTaskClick(taskInfo.id)
-      }}>
+      <div
+        className="task-title"
+        onClick={() => {
+          handleTaskClick(taskInfo.id)
+        }}
+      >
         {taskInfo.title}
+      </div>
+
+      <div className="buttons-container">
+
+        <button onClick={ () => {
+          handleDeleteTaskClick(taskInfo.id)
+        }}
+          className="remove-task-button">
+          X
+        </button>
       </div>
     </div>
   )

@@ -52,10 +52,21 @@ const handleTaskClick = (taskId) => {
 
 
 
+
+const  handleDeleteTaskClick = (taskId) => {
+  const newTasks = tasksObject.filter(task => task.id != taskId )
+
+  setTaskObject(newTasks)
+}
+
   return (
     <div className="container">
-      <AddTask handleOnClick={handleTaskAddition}  />
-      <Tasks taskObject={tasksObject} handleTaskClick = {handleTaskClick} />
+      <AddTask handleOnClick={handleTaskAddition} />
+      <Tasks
+        handleDeleteTaskClick={handleDeleteTaskClick}
+        taskObject={tasksObject}
+        handleTaskClick={handleTaskClick}
+      />
     </div>
   )
 }
