@@ -37,11 +37,25 @@ const handleTaskAddition = (taskTitle) => {
   }]
   setTaskObject(task)
   
+
+
 }
+
+
+const handleTaskClick = (taskId) => {
+  const newTasks = tasksObject.map(task =>{
+    if(task.id === taskId) return {...task, completed: !task.completed}
+    return task
+  })
+  setTaskObject(newTasks)
+}
+
+
+
   return (
     <div className="container">
-      <AddTask handleOnClick={handleTaskAddition} />
-      <Tasks taskObject={tasksObject} />
+      <AddTask handleOnClick={handleTaskAddition}  />
+      <Tasks taskObject={tasksObject} handleTaskClick = {handleTaskClick} />
     </div>
   )
 }
