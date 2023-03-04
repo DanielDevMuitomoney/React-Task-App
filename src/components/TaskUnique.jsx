@@ -3,7 +3,7 @@ import React from 'react'
 import '../styles/stylesComponents/TaskUnique.css'
 
 //icons
-import {CgClose} from 'react-icons/cg'
+import {CgClose,CgInfo} from 'react-icons/cg'
 
 const TaskUnique = ({ taskInfo, handleTaskClick, handleDeleteTaskClick }) => {
   return (
@@ -34,6 +34,11 @@ const TaskUnique = ({ taskInfo, handleTaskClick, handleDeleteTaskClick }) => {
         }}
           className="remove-task-button">
           <CgClose/>
+        </button>
+        
+        <button onClick={null}
+          className="see-task-details-button">
+          <CgInfo/>
         </button>
       </div>
     </div>
