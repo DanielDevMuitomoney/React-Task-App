@@ -16,18 +16,22 @@ import Header from './components/Header'
 
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Home from './pages/Home'
+import TaskDetails from './pages/TaskDetails'
 
 const App = () => {
   // Comportará as tarefas adicionadas pelo user
  
 
   return (
-    <BrowserRouter>
-      <Routes>
-   
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="container">
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:taskTitle" element={<TaskDetails />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 

@@ -45,15 +45,16 @@ const Home = () => {
   }
 
   return (
-    <div className="container">
-      <Header />
+<>
+      
       <AddTask handleOnClick={handleTaskAddition} />
       <Tasks
         handleDeleteTaskClick={handleDeleteTaskClick}
         taskObject={tasksObject}
         handleTaskClick={handleTaskClick}
       />
-    </div>
+      </>
+
   )
 }
 
