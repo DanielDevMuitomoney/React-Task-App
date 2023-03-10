@@ -5,7 +5,16 @@ import '../styles/stylesComponents/TaskUnique.css'
 //icons
 import {CgClose,CgInfo} from 'react-icons/cg'
 
+import {useNavigate} from 'react-router-dom'
+
 const TaskUnique = ({ taskInfo, handleTaskClick, handleDeleteTaskClick }) => {
+
+const navigate = useNavigate();
+
+const handleTaskDetailsClick = () => {
+  navigate(`/${taskInfo.title}`)
+}
+
   return (
 
     <div
@@ -36,7 +45,7 @@ const TaskUnique = ({ taskInfo, handleTaskClick, handleDeleteTaskClick }) => {
           <CgClose/>
         </button>
         
-        <button onClick={null}
+        <button onClick={handleTaskDetailsClick}
           className="see-task-details-button">
           <CgInfo/>
         </button>
