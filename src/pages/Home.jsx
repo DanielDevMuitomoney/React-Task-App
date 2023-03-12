@@ -1,34 +1,62 @@
-import react, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AddTask from '../components/AddTask'
 import Header from '../components/Header'
 import Tasks from '../components/Tasks'
 import { v4 as uuidv4 } from 'uuid'
 import axios from 'axios'
 
+
+
+
+
+// class Home extends React.Component {
+
+//   constructor () {
+//     super();
+
+//     this.state = {
+//       message: 'hello Worl2d'
+//     }
+
+
+//   }
+
+//   componentDidMount(){
+//     console.log('RECEBA')
+//   }
+
+//   handleChangeMessageButtonClick(){
+//     this.setState({message:'hello'})
+//   }
+
+//   render() {
+//     return (
+//       <>
+//       <h1>{this.state.message}</h1>
+//       <button onClick={this.handleChangeMessageButtonClick.bind(this)}>Change Message</button>
+//       </>
+//     )
+//   }
+// }
+
+// export default Home
 const Home = () => {
-  const [tasksObject, setTaskObject] = useState([
-    {
-      id: '1',
-      title: 'Estudar programação',
-      completed: false,
-    },
-    {
-      id: '2',
-      title: 'Ler livros',
-      completed: true,
-    },
-  ])
+  const [tasksObject, setTaskObject] = useState([])
 
   const handleTaskAddition = (taskTitle) => {
-    const task = [
-      ...tasksObject,
-      {
-        title: taskTitle,
-        id: uuidv4(),
-        completed: false,
-      },
-    ]
-    setTaskObject(task)
+    if(taskTitle.length<1) {return}
+    else{
+          const task = [
+            ...tasksObject,
+            {
+              title: taskTitle,
+              id: uuidv4(),
+              completed: false,
+            },
+          ]
+          setTaskObject(task)
+    }
+
   }
 
 
