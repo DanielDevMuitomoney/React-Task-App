@@ -4,7 +4,7 @@ import '../styles/stylesComponents/AddTask.css'
 import ConfirmButton from './confirmButton'
 
 const AddTask = ({handleOnClick}) => {
-  const [inputData, setInputData]  = useState(null)
+  const [inputData, setInputData]  = useState('')
   
     const handleAddTaskClick = () => {
       handleOnClick(inputData)

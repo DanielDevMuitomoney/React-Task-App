@@ -4,7 +4,7 @@ import TaskUnique from './TaskUnique'
 const Tasks = ({ taskObject, handleTaskClick, handleDeleteTaskClick }) => {
   return (
     <>
-      {taskObject.map((task) => (
+      { taskObject && taskObject.map((task) => (
         <TaskUnique
           handleDeleteTaskClick={handleDeleteTaskClick}
           taskInfo={task}
